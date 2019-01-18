@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>1.0.1</PackageVersion>
+    <Authors>Sebastian Bucko</Authors>
+    <Owners>Sebastian Bucko</Owners>
+    <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
+    <Title>dbBus.Core</Title>
+    <PackageId>dbBus.Core</PackageId>
+    <Description>Core library for dbBus messaging framework.</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="TheOne.OrmLite" Version="0.0.6" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
