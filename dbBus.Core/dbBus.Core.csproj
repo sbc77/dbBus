@@ -9,6 +9,8 @@
     <Title>dbBus.Core</Title>
     <PackageId>dbBus.Core</PackageId>
     <Description>Core library for dbBus messaging framework.</Description>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
+    <PackOnBuild>true</PackOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

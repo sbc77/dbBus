@@ -7,6 +7,10 @@
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <LangVersion>Latest</LangVersion>
     </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+      <DebugType></DebugType>
+      <LangVersion>Latest</LangVersion>
+    </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Ninject" Version="3.3.4" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />

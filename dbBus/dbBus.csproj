@@ -9,6 +9,8 @@
     <Title>dbBus</Title>
     <Description>Simple messaging framework with database as transport layer.</Description>
     <PackageId>dbBus</PackageId>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
+    <PackOnBuild>true</PackOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
