@@ -15,11 +15,9 @@ namespace dbBus
         private readonly ILogger<Bus> log;
         private readonly PullMessagesJob job;
         private readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-        private readonly IDependencyAdapter depCfg;
 
-        public Bus(IBusConfiguration cfg, ILogger<Bus> log, PullMessagesJob job, IDependencyAdapter depCfg)
+        public Bus(IBusConfiguration cfg, ILogger<Bus> log, PullMessagesJob job)
         {
-            this.depCfg = depCfg;
             this.cfg = cfg;
             this.log = log;
             this.job = job;

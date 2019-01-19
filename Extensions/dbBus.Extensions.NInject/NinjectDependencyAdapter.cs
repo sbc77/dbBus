@@ -16,32 +16,32 @@ namespace dbBus.Extensions.NInject
 
         public T GetService<T>()
         {
-            return this.GetService<T>();
+            return (T)this.kernel.GetService(typeof(T));
         }
 
         public object GetService(Type type)
         {
-            return this.GetService(type);
+            return this.kernel.GetService(type);
         }
 
         public IEnumerable<object> GetServices(Type type)
         {
-            return this.GetServices(type);
+            return this.kernel.GetAll(type);
         }
 
         public void SetConstraintService(Type abst, object impl)
         {
-            kernel.Bind(abst).ToConstant(impl);
+            this.kernel.Bind(abst).ToConstant(impl);
         }
 
         public void SetService(Type abst, Type impl)
         {
-            kernel.Bind(abst).To(impl);
+            this.kernel.Bind(abst).To(impl);
         }
 
         public void SetSingletonService(Type abst, Type impl)
         {
-            kernel.Bind(abst).To(impl).InSingletonScope();
+            this.kernel.Bind(abst).To(impl).InSingletonScope();
         }
     }
 }

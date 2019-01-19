@@ -15,13 +15,13 @@ namespace dbBus
     public class PullMessagesJob
     {
         private readonly IBusConfiguration cfg;
-        private readonly IDependencyAdapter depCfg;
+        // private readonly IDependencyAdapter depCfg;
         private readonly ILogger<PullMessagesJob> log;
 
-        public PullMessagesJob(IBusConfiguration cfg, IDependencyAdapter depCfg, ILogger<PullMessagesJob> log)
+        public PullMessagesJob(IBusConfiguration cfg, ILogger<PullMessagesJob> log)
         {
             this.cfg = cfg;
-            this.depCfg = depCfg;
+            //this.depCfg = depCfg;
             this.log = log;
         }
 
@@ -92,7 +92,7 @@ namespace dbBus
 
             try
             {
-                var handler = this.depCfg.GetService(ri.HandlerType);
+                var handler = this.cfg.DependencyAdapter.GetService(ri.HandlerType);
                 var messageCtx = (IMessage)JsonConvert.DeserializeObject(message.Content, ri.MessageType);
                 messageCtx.InternalId = message.Id;
                 await (Task)ri.HandlerType.GetMethod("Handle").Invoke(handler, new[] { messageCtx });

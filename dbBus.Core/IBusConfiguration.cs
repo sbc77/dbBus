@@ -14,10 +14,9 @@ namespace dbBus.Core
 
         IDbConnectionFactory DbConnectionFactory { get; set; }
         IDependencyAdapter DependencyAdapter { get; set; }
-
         IList<RegistrationInfo> RegistrationInfo { get; }
-
         IBusConfiguration RegisterHandler<T>();
         IBus Build();
+
     }
 }
