@@ -47,7 +47,7 @@ You can just simply use your bus instance:
 ``` C#
 await bus.Publish(new MyMessage());
 ```
-... or you can use bus via constructor dependency injection.
+... or you can use bus via constructor dependency injection:
 
 ``` C#
 public class MyAwesomeClass
