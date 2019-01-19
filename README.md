@@ -37,7 +37,7 @@ public class MyMessageHandler : IHandle<MyMessage>
 {
     public async Task Handle(MyMessage message)
     {
-        // proces message here
+        // process message here
     }
 }
 ```
