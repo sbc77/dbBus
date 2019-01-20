@@ -9,16 +9,38 @@ DotNet Standard 2.0
 Currently supported:
 * DI
   - Ninject
+  - Microsoft.Extensions.DependencyInjection;
 * Databases: 
   - Mssql
 
 ## Usage
+### Console application
 ``` C#
 var bus = Bus.Configure()
             .UseNinject(kernel)
             .UseMssql("Server=<addr>;Database=<database>;User Id=<user>;Password=<password>;MultipleActiveResultSets=true;"))
             .RegisterHandler<MyMessageHandler>()
             .Build();
+```
+### AspNet application
+Add this to Startup.cs
+``` C#
+public void ConfigureServices(IServiceCollection services)
+{
+  ...
+  services.AddDbBus(() => Bus.Configure()
+                  .UseAspNetCore(services)
+                  .UseMssql("connection string goes here")
+                  .RegisterHandler<MyHandler>());
+  ...
+}
+
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+  ...
+  app.UseDbBus();
+  ...
+}
 ```
 In case of Mssql, is important to set **MultipleActiveResultSets** in connection string.
 
