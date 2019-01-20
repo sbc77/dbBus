@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace dbBus.Core.Model
+﻿namespace dbBus.Core.Model
 {
+    using System;
+
     public class RegistrationInfo
     {
         public string MessageTypeName { get; set; }

@@ -1,14 +1,14 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using dbBus.Core;
-using dbBus.Core.Model;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using TheOne.OrmLite.Core;
-
-namespace dbBus
+﻿namespace dbBus
 {
+    using System;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using dbBus.Core;
+    using dbBus.Core.Model;
+    using Microsoft.Extensions.Logging;
+    using Newtonsoft.Json;
+    using TheOne.OrmLite.Core;
+
     public class Bus : IBus
     {
         private readonly IBusConfiguration cfg;
@@ -64,7 +64,7 @@ namespace dbBus
             {
                 while (true)
                 {
-                    await job.Execute();
+                    await this.job.Execute();
                     await Task.Delay(this.cfg.PullInterval, this.cancellationTokenSource.Token);
                     if (this.cancellationTokenSource.IsCancellationRequested)
                     {

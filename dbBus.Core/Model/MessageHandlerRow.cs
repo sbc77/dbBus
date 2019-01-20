@@ -1,8 +1,8 @@
-﻿using System;
-using TheOne.OrmLite.Core.DataAnnotations;
-
-namespace dbBus.Core.Model
+﻿namespace dbBus.Core.Model
 {
+    using System;
+    using TheOne.OrmLite.Core.DataAnnotations;
+
     [OrmLiteAlias("MessageHandlers")]
     public class MessageHandlerRow
     {

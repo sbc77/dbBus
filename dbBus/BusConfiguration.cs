@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using dbBus.Core;
-using dbBus.Core.Model;
-using TheOne.OrmLite.Core;
-
-namespace dbBus
+﻿namespace dbBus
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using dbBus.Core;
+    using dbBus.Core.Model;
+    using TheOne.OrmLite.Core;
+
     public class BusConfiguration : IBusConfiguration
     {
         public BusConfiguration()
@@ -20,12 +20,17 @@ namespace dbBus
         }
 
         public int PullInterval { get; set; }
+
         public int PullMaxMessages { get; set; }
+
         public TimeSpan MessageLifetime { get; set; }
+
         public int MaxRetry { get; set; }
 
         public IDbConnectionFactory DbConnectionFactory { get; set; }
+
         public IDependencyAdapter DependencyAdapter { get; set; }
+
         public IList<RegistrationInfo> RegistrationInfo { get; }
 
         public IBus Build()
@@ -49,10 +54,7 @@ namespace dbBus
             };
 
             this.RegistrationInfo.Add(ri);
-
-            var gt = typeof(IHandle<>).MakeGenericType(ga);
-
-            this.DependencyAdapter.SetService(gt, typeof(T));
+            this.DependencyAdapter.SetService(typeof(T));
 
             return this;
         }
