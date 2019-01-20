@@ -31,7 +31,7 @@ public void ConfigureServices(IServiceCollection services)
   services.AddDbBus(() => Bus.Configure()
                   .UseAspNetCore(services)
                   .UseMssql("connection string goes here")
-                  .RegisterHandler<MyHandler>());
+                  .RegisterHandler<MyMessageHandler>());
   ...
 }
 
