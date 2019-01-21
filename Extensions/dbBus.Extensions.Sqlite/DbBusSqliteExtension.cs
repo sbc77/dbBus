@@ -5,7 +5,7 @@ using TheOne.OrmLite.Sqlite;
 
 namespace dbBus.Extensions.Sqlite
 {
-    public static class DbBusMssqlExtension
+    public static class DbBusSqliteExtension
     {
         public static IBusConfiguration UseSqlite(this IBusConfiguration cfg, string connectionString)
         {
