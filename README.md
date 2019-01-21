@@ -12,6 +12,7 @@ Currently supported:
   - Microsoft.Extensions.DependencyInjection;
 * Databases: 
   - Mssql
+  - Sqlite
 
 ## Usage
 ### Console application
