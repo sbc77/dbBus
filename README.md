@@ -26,7 +26,7 @@ var bus = Bus.Configure()
             
 bus.Start();
 ```
-### AspNet application
+### AspNet Core application
 Add this to Startup.cs
 ``` C#
 public void ConfigureServices(IServiceCollection services)
