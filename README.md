@@ -21,6 +21,8 @@ var bus = Bus.Configure()
             .UseMssql("Server=<addr>;Database=<database>;User Id=<user>;Password=<password>;MultipleActiveResultSets=true;"))
             .RegisterHandler<MyMessageHandler>()
             .Build();
+            
+bus.Start();
 ```
 ### AspNet application
 Add this to Startup.cs
