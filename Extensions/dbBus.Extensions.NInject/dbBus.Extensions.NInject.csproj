@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>dbBus.Extensions.Ninject</PackageId>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>1.0.4</PackageVersion>
         <Authors>Sebastian Bucko</Authors>
         <Description>Ninject extension for dbBus messaging framework</Description>
         <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>

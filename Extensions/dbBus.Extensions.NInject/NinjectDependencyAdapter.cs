@@ -35,6 +35,11 @@
             this.kernel.Bind(impl).ToSelf();
         }
 
+        public void SetService(Type abst, Type impl)
+        {
+            this.kernel.Bind(abst).To(impl);
+        }
+
         public void SetSingletonService(Type abst, Type impl)
         {
             this.kernel.Bind(abst).To(impl).InSingletonScope();

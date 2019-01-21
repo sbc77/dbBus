@@ -43,5 +43,10 @@
         {
             this.sc.AddTransient(impl);
         }
+
+        public void SetService(Type abst, Type impl)
+        {
+            this.sc.AddTransient(abst, impl);
+        }
     }
 }

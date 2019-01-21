@@ -1,10 +1,12 @@
 ﻿namespace dbBus.Core
 {
     using System;
-    
+
     public interface IDependencyAdapter
     {
         void SetService(Type impl);
+
+        void SetService(Type abst, Type impl);
 
         void SetSingletonService(Type abst, Type impl);
 

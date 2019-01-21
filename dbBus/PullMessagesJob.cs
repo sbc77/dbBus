@@ -6,7 +6,7 @@
     using System.Data;
     using System.Linq;
     using System.Threading.Tasks;
-    
+
     using dbBus.Core;
     using dbBus.Core.Model;
 
@@ -55,11 +55,11 @@
         private async Task ProcessMessages(IDbConnection db, RegistrationInfo ri)
         {
             const string Qry = @"select * 
-                        from dbo.Messages m
+                        from Messages m
                         where m.MessageType = @MessageTypeName
                         and m.ValidUntil >= @date
                         and not exists (
-                            select 1 from dbo.MessageHandlers h 
+                            select 1 from MessageHandlers h 
                             where h.MessageId = m.id
                                 and h.HandlerId = @HandlerTypeName
                                 and h.Error is null

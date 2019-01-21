@@ -1,26 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>1.0.3</PackageVersion>
-    <Authors>Sebastian Bucko</Authors>
-    <Owners>Sebastian Bucko</Owners>
-    <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
-    <Title>dbBus.Core</Title>
-    <PackageId>dbBus.Core</PackageId>
-    <Description>Core library for dbBus messaging framework.</Description>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
-    <PackOnBuild>true</PackOnBuild>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Class1.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="TheOne.OrmLite" Version="0.0.6" />
-    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageVersion>1.0.4</PackageVersion>
+        <Authors>Sebastian Bucko</Authors>
+        <Owners>Sebastian Bucko</Owners>
+        <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
+        <Title>dbBus.Core</Title>
+        <PackageId>dbBus.Core</PackageId>
+        <Description>Core library for dbBus messaging framework.</Description>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
+        <PackOnBuild>true</PackOnBuild>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="TheOne.OrmLite" Version="0.0.6" />
+        <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Model\" />
+    </ItemGroup>
 </Project>

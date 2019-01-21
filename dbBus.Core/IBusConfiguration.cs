@@ -21,6 +21,9 @@
 
         IBusConfiguration RegisterHandler<T>();
 
+        IBusConfiguration UseDefaultConsoleLogger();
+
         IBus Build();
+
     }
 }

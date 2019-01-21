@@ -6,6 +6,7 @@
     using System.Reflection;
     using dbBus.Core;
     using dbBus.Core.Model;
+    using Microsoft.Extensions.Logging;
     using TheOne.OrmLite.Core;
 
     public class BusConfiguration : IBusConfiguration
@@ -56,6 +57,12 @@
             this.RegistrationInfo.Add(ri);
             this.DependencyAdapter.SetService(typeof(T));
 
+            return this;
+        }
+
+        public IBusConfiguration UseDefaultConsoleLogger()
+        {
+            this.DependencyAdapter.SetService(typeof(ILogger<>), typeof(DefaultBusLogger<>));
             return this;
         }
     }

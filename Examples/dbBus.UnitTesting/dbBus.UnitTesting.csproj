@@ -16,5 +16,6 @@
     <ProjectReference Include="..\..\dbBus.Core\dbBus.Core.csproj" />
     <ProjectReference Include="..\..\Extensions\dbBus.Extensions.NInject\dbBus.Extensions.NInject.csproj" />
     <ProjectReference Include="..\..\dbBus\dbBus.csproj" />
+    <ProjectReference Include="..\..\Extensions\dbBus.Extensions.Sqlite\dbBus.Extensions.Sqlite.csproj" />
   </ItemGroup>
 </Project>
