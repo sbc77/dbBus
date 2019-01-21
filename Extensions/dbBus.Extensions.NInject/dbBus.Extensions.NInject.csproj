@@ -1,23 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>dbBus.Extensions.Ninject</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
-    <Authors>Sebastian Bucko</Authors>
-    <Description>Ninject extension to dbBus messaging framework</Description>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
-    <Owners>Sebastian Bucko</Owners>
-    <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
-    <Title>dbBus.Extensions.Ninject</Title>
-    <PackOnBuild>true</PackOnBuild>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Ninject" Version="3.3.4" />
-    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\dbBus.Core\dbBus.Core.csproj" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>dbBus.Extensions.Ninject</PackageId>
+        <PackageVersion>1.0.3</PackageVersion>
+        <Authors>Sebastian Bucko</Authors>
+        <Description>Ninject extension for dbBus messaging framework</Description>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
+        <Owners>Sebastian Bucko</Owners>
+        <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
+        <Title>dbBus.Extensions.Ninject</Title>
+        <PackOnBuild>true</PackOnBuild>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Ninject" Version="3.3.4" />
+        <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\dbBus.Core\dbBus.Core.csproj" />
+    </ItemGroup>
 </Project>
