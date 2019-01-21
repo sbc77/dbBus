@@ -19,6 +19,7 @@ Currently supported:
 ``` C#
 var bus = Bus.Configure()
             .UseNinject(kernel)
+            .UseDefaultConsoleLogger()
             .UseMssql("Server=<addr>;Database=<database>;User Id=<user>;Password=<password>;MultipleActiveResultSets=true;"))
             .RegisterHandler<MyMessageHandler>()
             .Build();
