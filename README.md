@@ -101,7 +101,8 @@ public class MyErrorHandler : IErrorHandler
     public async Task<bool> OnError(object sender, Exception e, IMessage message, int retryNo)
     {
         Console.WriteLine($"Error reading message #{message.InternalId}, retry #{retryNo}");
-        return await Task.FromResult(true);
+        return await Task.FromResult(true); // true if you like to retry message handling
+        // you can configure how many times engine will try to handle message - default 3 times
     }
 }
 ``` 
