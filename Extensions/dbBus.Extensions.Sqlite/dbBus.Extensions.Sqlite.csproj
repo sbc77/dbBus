@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackOnBuild>true</PackOnBuild>
-        <PackageVersion>1.0.4</PackageVersion>
+        <PackageVersion>1.0.5</PackageVersion>
         <Authors>Sebastian Bucko</Authors>
         <Description>Sqlite extension for dbBus messaging framework.</Description>
         <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>

@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackOnBuild>true</PackOnBuild>
-        <PackageVersion>1.0.4</PackageVersion>
+        <PackageVersion>1.0.5</PackageVersion>
         <Authors>Sebastian Bucko</Authors>
         <Description>AspNetCore extension for dbBus messaging framework.</Description>
         <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
