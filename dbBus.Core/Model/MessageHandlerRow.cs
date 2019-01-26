@@ -21,7 +21,5 @@
 
         [OrmLiteReferences(typeof(MessageRow))]
         public long MessageId { get; set; }
-
-        public int RetryNo { get; set; }
     }
 }

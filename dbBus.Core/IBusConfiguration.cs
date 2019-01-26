@@ -11,6 +11,8 @@
 
         int PullMaxMessages { get; set; }
 
+        int MaxRetry { get; set; }
+
         TimeSpan MessageLifetime { get; set; }
 
         IDbConnectionFactory DbConnectionFactory { get; set; }
@@ -23,7 +25,10 @@
 
         IBusConfiguration UseDefaultConsoleLogger();
 
+        IBusConfiguration RegisterErrorHandler<T>() where T : IErrorHandler;
+
         IBus Build();
 
+        void SetBindings();
     }
 }

@@ -22,6 +22,6 @@
         [OrmLiteStringLength(int.MaxValue)]
         public string Content { get; set; }
 
-
+        public int RetryNo { get; set; }
     }
 }

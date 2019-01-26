@@ -36,6 +36,7 @@ namespace dbBus.AspNet
             var busCfg = Bus.Configure()
                 .UseAspNetCore(services)
                 .UseMssql(cs)
+                // .RegisterErrorHandler<MyErrorHandler>()
                 .RegisterHandler<MyHandler>();
 
             busCfg.PullInterval = 3000;

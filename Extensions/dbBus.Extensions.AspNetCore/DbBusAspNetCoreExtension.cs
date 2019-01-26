@@ -24,10 +24,7 @@
         public static IBusConfiguration UseAspNetCore(this IBusConfiguration bc, IServiceCollection service)
         {
             bc.DependencyAdapter = new AspNetCoreDependencyAdapter(service);
-
-            service.AddSingleton(bc);
-            service.AddSingleton(typeof(IBus), typeof(Bus));
-            service.AddSingleton(typeof(PullMessagesJob));
+            bc.SetBindings();
 
             return bc;
         }

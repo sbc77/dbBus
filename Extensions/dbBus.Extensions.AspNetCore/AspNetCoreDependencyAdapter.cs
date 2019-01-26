@@ -1,6 +1,7 @@
 ﻿namespace dbBus.Extensions.AspNetCore
 {
     using System;
+    using System.Linq;
     using dbBus.Core;
     using Microsoft.Extensions.DependencyInjection;
 
@@ -19,19 +20,29 @@
             this.sp = serviceProvider;
         }
 
-        public T GetService<T>()
+        public T GetService<T>() where T : class
         {
-            return this.sp.GetService<T>();
+            return this.sp.GetRequiredService<T>();
+        }
+
+        public T TryGetService<T>() where T : class
+        {
+            return this.sp.GetServices<T>().FirstOrDefault();
         }
 
         public object GetService(Type type)
         {
-            return this.sp.GetService(type);
+            return this.sp.GetRequiredService(type);
         }
 
         public void SetConstraintService(Type abst, object impl)
         {
             this.sc.AddSingleton(abst, impl);
+        }
+
+        public void SetSingletonService(Type impl)
+        {
+            this.sc.AddSingleton(impl);
         }
 
         public void SetSingletonService(Type abst, Type impl)
@@ -47,6 +58,11 @@
         public void SetService(Type abst, Type impl)
         {
             this.sc.AddTransient(abst, impl);
+        }
+
+        public bool IsRegistered<T>() where T : class
+        {
+            return this.sc.Any(x => x.ServiceType == typeof(T));
         }
     }
 }

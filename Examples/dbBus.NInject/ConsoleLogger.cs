@@ -19,7 +19,6 @@ namespace dbBus.NInjectMsSql
             {
                 Console.WriteLine(exception);
             }
-
         }
 
         public bool IsEnabled(LogLevel logLevel) => true;

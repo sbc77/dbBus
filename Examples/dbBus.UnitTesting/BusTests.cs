@@ -20,7 +20,6 @@ namespace dbBus.UnitTesting
               .RegisterHandler<MyMessageHandler>()
               .Build();
 
-
             bus.Start();
 
             MyMessageHandler.Received = false;

@@ -36,9 +36,20 @@
 
         public IBus Build()
         {
+            this.SetBindings();
+            return this.DependencyAdapter.GetService<IBus>();
+        }
+
+        public void SetBindings()
+        {
+            if (!this.DependencyAdapter.IsRegistered<IErrorHandler>())
+            {
+                this.DependencyAdapter.SetService(typeof(IErrorHandler), typeof(DefaultErrorHandler));
+            }
+
+            this.DependencyAdapter.SetSingletonService(typeof(PullMessagesJob));
             this.DependencyAdapter.SetConstraintService(typeof(IBusConfiguration), this);
             this.DependencyAdapter.SetSingletonService(typeof(IBus), typeof(Bus));
-            return this.DependencyAdapter.GetService<IBus>();
         }
 
         public IBusConfiguration RegisterHandler<T>()
@@ -63,6 +74,12 @@
         public IBusConfiguration UseDefaultConsoleLogger()
         {
             this.DependencyAdapter.SetService(typeof(ILogger<>), typeof(DefaultBusLogger<>));
+            return this;
+        }
+
+        public IBusConfiguration RegisterErrorHandler<T>() where T : IErrorHandler
+        {
+            this.DependencyAdapter.SetService(typeof(IErrorHandler), typeof(T));
             return this;
         }
     }
