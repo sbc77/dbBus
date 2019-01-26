@@ -1,6 +1,6 @@
 # dbBus
 
-Simple async messaging framework with database as transport layer.
+Simple async messaging framework with database as transport layer.  
 
 DotNet Core 2.2  
 DotNet Standard 2.0
@@ -13,6 +13,7 @@ Currently supported:
 * Databases: 
   - Mssql
   - Sqlite
+  - Sqlite in memory (awesome for unit testing)
 
 ## Usage
 ### Console application
@@ -90,4 +91,27 @@ public class MyAwesomeClass
         await this.bus.Publish(new MyMessage());
     }
 }
+```
+
+## Custom error handler
+Create class that implements IErrorHandler
+```C#
+public class MyErrorHandler : IErrorHandler
+{
+    public async Task<bool> OnError(object sender, Exception e, IMessage message, int retryNo)
+    {
+        Console.WriteLine($"Error reading message #{message.InternalId}, retry #{retryNo}");
+        return await Task.FromResult(true);
+    }
+}
+``` 
+.. and register during bus configuration:
+  
+```C#
+var bus = Bus.Configure()
+    .UseNinject(kernel)
+    .UseMssql("my onnection string")) 
+    .RegisterHandler<MyMessageHandler1>()
+    .RegisterErrorHandler<MyErrorHandler>()  <-- custom error handler
+    .Build();
 ```
