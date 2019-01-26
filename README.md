@@ -102,7 +102,6 @@ public class MyErrorHandler : IErrorHandler
     {
         Console.WriteLine($"Error reading message #{message.InternalId}, retry #{retryNo}");
         return await Task.FromResult(true); // true if you like to retry message handling
-        // you can configure how many times engine will try to handle message - default 3 times
     }
 }
 ``` 
@@ -116,3 +115,10 @@ var bus = Bus.Configure()
     .RegisterErrorHandler<MyErrorHandler>()  <-- custom error handler
     .Build();
 ```
+### Configuration parameters
+| Parameter        | Description                             | Default value  |
+| ---------------- | --------------------------------------- | --------------:|
+| *PullInterval*   | delay between each message pull | 1000 ms |
+| *PullMaxMessages*| max number of processed message in each pull | 100 |
+| *MaxRetry*       | how many times engine will retry handling message | 3 times |
+| *MessageLifetime*| how long message will be available for pulling | 7 days |
