@@ -8,8 +8,8 @@ namespace dbBus.AspNet
     {
         public async Task Handle(MyMessage message)
         {
-            throw new Exception("Fail!");
-            //await Task.CompletedTask;
+            //throw new Exception("Fail!");
+            await Task.CompletedTask;
         }
     }
 }

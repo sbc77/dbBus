@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackOnBuild>true</PackOnBuild>
-        <PackageVersion>1.0.5</PackageVersion>
+        <PackageVersion>1.0.6</PackageVersion>
         <Authors>Sebastian Bucko</Authors>
         <Description>Mssql extension for dbBus messaging framework.</Description>
         <PackageLicenseUrl>https://raw.githubusercontent.com/sbc77/dbBus/master/LICENSE</PackageLicenseUrl>
@@ -15,9 +15,6 @@
     <ItemGroup>
         <PackageReference Include="TheOne.OrmLite.SqlServer" Version="0.0.8" />
         <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="TheOne.OrmLite, Version=0.0.6.0, Culture=neutral, PublicKeyToken=null" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\dbBus.Core\dbBus.Core.csproj" />
