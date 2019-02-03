@@ -13,8 +13,8 @@
         <PackageId>dbBus.Extensions.Mssql</PackageId>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="TheOne.OrmLite.SqlServer" Version="0.0.6" />
-        <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+        <PackageReference Include="TheOne.OrmLite.SqlServer" Version="0.0.8" />
+        <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
     </ItemGroup>
     <ItemGroup>
         <Reference Include="TheOne.OrmLite, Version=0.0.6.0, Culture=neutral, PublicKeyToken=null" />

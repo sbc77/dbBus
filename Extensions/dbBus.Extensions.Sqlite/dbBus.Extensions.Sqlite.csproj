@@ -16,6 +16,6 @@
         <ProjectReference Include="..\..\dbBus.Core\dbBus.Core.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="TheOne.OrmLite.Sqlite" Version="0.0.6" />
+        <PackageReference Include="TheOne.OrmLite.Sqlite" Version="0.0.8" />
     </ItemGroup>
 </Project>
