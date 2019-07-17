@@ -11,6 +11,7 @@
         <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
         <Title>dbBus.Extensions.Sqlite</Title>
         <PackageId>dbBus.Extensions.Sqlite</PackageId>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\dbBus.Core\dbBus.Core.csproj" />
