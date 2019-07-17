@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <PackageVersion>1.0.6</PackageVersion>
+        <PackageVersion>1.0.7</PackageVersion>
         <Authors>Sebastian Bucko</Authors>
         <Owners>Sebastian Bucko</Owners>
         <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
@@ -16,7 +16,7 @@
         <ProjectReference Include="..\dbBus.Core\dbBus.Core.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
         <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
         <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
     </ItemGroup>

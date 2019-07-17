@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <PackageVersion>1.0.6</PackageVersion>
+        <PackageVersion>1.0.7</PackageVersion>
         <Authors>Sebastian Bucko</Authors>
         <Owners>Sebastian Bucko</Owners>
         <PackageProjectUrl>https://github.com/sbc77/dbBus</PackageProjectUrl>
@@ -13,7 +13,7 @@
         <PackOnBuild>true</PackOnBuild>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="TheOne.OrmLite" Version="0.0.8" />
+        <PackageReference Include="TheOne.OrmLite" Version="0.1.0" />
         <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
     </ItemGroup>
     <ItemGroup>
