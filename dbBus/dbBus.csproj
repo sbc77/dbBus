@@ -16,7 +16,7 @@
         <ProjectReference Include="..\dbBus.Core\dbBus.Core.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
         <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
         <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
     </ItemGroup>
